@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="HelpNomicUML">
+  <ClassDiagramComponents>
+    <Class name="SuperAdmin" package="" visibility="public" xPosition="339.0" yPosition="95.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="DNI" type="double" visibility="private" isFinal="true"/>
+        <Field name="CarteraBase" type="double" visibility="private" isFinal="true"/>
+        <Field name="CarteraActual" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Admin" package="" visibility="public" xPosition="124.0" yPosition="374.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="public"/>
+        <Field name="DNI" type="double" visibility="public" isFinal="true"/>
+        <Field name="Cartera" type="double" visibility="public"/>
+        <Field name="Sueldo" type="double" visibility="public"/>
+        <Field name="Direccion" type="String" visibility="public"/>
+        <Field name="Telefono" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="User" package="" visibility="public" xPosition="527.0" yPosition="570.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="public"/>
+        <Field name="DNI" type="double" visibility="public"/>
+        <Field name="Telefono" type="int" visibility="public"/>
+        <Field name="CuentaBancaria" type="double" visibility="public"/>
+        <Field name="Direccion" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Credito" package="" visibility="public" xPosition="688.0" yPosition="120.0">
+      <Fields>
+        <Field name="DNI" type="double" visibility="public"/>
+        <Field name="Monto" type="double" visibility="public"/>
+        <Field name="TipoDePago" type="String" visibility="public"/>
+        <Field name="MetodoDePago" type="String" visibility="public"/>
+        <Field name="Cuotas" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="Cartera" source="Admin" target="Credito" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <HasRelation name="Clientes" source="Admin" target="User" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <UseRelation name="Clientes" source="SuperAdmin" target="User" sourceCardinality="0..*" targetCardinality="1..1"/>
+    <HasRelation name="Cobradores" source="SuperAdmin" target="Admin" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <UseRelation name="Prestamos" source="User" target="Credito" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="Cartera" source="SuperAdmin" target="Credito" sourceCardinality="1..1" targetCardinality="0..*"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
