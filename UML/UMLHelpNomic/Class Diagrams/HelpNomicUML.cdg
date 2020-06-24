@@ -35,6 +35,7 @@
         <Field name="Telefono" type="int" visibility="public"/>
         <Field name="CuentaBancaria" type="double" visibility="public"/>
         <Field name="Direccion" type="String" visibility="public"/>
+        <Field name="PuntosNegativos" type="int" visibility="public"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
@@ -48,6 +49,7 @@
         <Field name="TipoDePago" type="String" visibility="public"/>
         <Field name="MetodoDePago" type="String" visibility="public"/>
         <Field name="Cuotas" type="int" visibility="public"/>
+        <Field name="PuntosNegativos" type="int" visibility="public"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
@@ -56,11 +58,11 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation name="Cartera" source="Admin" target="Credito" sourceCardinality="1..1" targetCardinality="0..*"/>
-    <HasRelation name="Clientes" source="Admin" target="User" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
     <UseRelation name="Clientes" source="SuperAdmin" target="User" sourceCardinality="0..*" targetCardinality="1..1"/>
     <HasRelation name="Cobradores" source="SuperAdmin" target="Admin" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <UseRelation name="Cartera" source="Admin" target="Credito" sourceCardinality="1..1" targetCardinality="0..*"/>
     <UseRelation name="Prestamos" source="User" target="Credito" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <HasRelation name="Clientes" source="Admin" target="User" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
     <UseRelation name="Cartera" source="SuperAdmin" target="Credito" sourceCardinality="1..1" targetCardinality="0..*"/>
   </ClassDiagramRelations>
 </ClassDiagram>
