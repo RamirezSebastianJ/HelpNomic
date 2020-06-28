@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_solicitar_credito"
+            android:title="Solicitud de Crédito" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_solicitar_renovacion"
+            android:title="Solicitud de Renovación" />
+        <item
+            android:id="@+id/nav_creditosActivosFragment"
+            android:icon="@drawable/ic_meu_creditos_activos"
+            android:title="Créditos Activos" />
+        <item
+            android:id="@+id/nav_historialDeCreditosFragment"
+            android:icon="@drawable/ic_menu_historial_creditos"
+            android:title="Historial de Créditos" />
+        <item
+            android:id="@+id/nav_ayudaHelpNomicFragment"
+            android:icon="@drawable/ic_menu_ayuda_help_nomic"
+            android:title="Ayuda HelpNomic" />
+    </group>
+</menu>

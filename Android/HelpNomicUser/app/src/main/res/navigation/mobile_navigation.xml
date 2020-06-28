@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.helpnomicuser.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.helpnomicuser.ui.solicitudCredito.SolictudCreditoFragment"
+        android:label="Solicitud de Crédito"
+        tools:layout="@layout/fragment_solicitud_credito" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.helpnomicuser.ui.solictudRenovacion.SolicitudRenovacionFragment"
+        android:label="Solicitud de Renovación"
+        tools:layout="@layout/fragment_solicitud_renovacion" />
+    <fragment
+        android:id="@+id/nav_creditosActivosFragment"
+        android:name="com.example.helpnomicuser.ui.creditosActivos.CreditosActivosFragment"
+        android:label="Créditos Activos"
+        tools:layout="@layout/fragment_creditos_activos" />
+    <fragment
+        android:id="@+id/nav_historialDeCreditosFragment"
+        android:name="com.example.helpnomicuser.ui.historialDeCreditos.HistorialDeCreditosFragment"
+        android:label="Historial de Créditos"
+        tools:layout="@layout/fragment_historial_de_creditos" />
+    <fragment
+        android:id="@+id/nav_ayudaHelpNomicFragment"
+        android:name="com.example.helpnomicuser.ui.ayudaHelpNomic.AyudaHelpNomicFragment"
+        android:label="Ayuda HelpNomic"
+        tools:layout="@layout/fragment_ayuda_help_nomic" />
+</navigation>

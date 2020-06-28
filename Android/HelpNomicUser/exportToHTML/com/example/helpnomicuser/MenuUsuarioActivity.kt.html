@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>MenuUsuarioActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MenuUsuarioActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.helpnomicuser</span>
+
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import android.view.Menu</span>
+<span class="s1">import com.google.android.material.floatingactionbutton.FloatingActionButton</span>
+<span class="s1">import com.google.android.material.snackbar.Snackbar</span>
+<span class="s1">import com.google.android.material.navigation.NavigationView</span>
+<span class="s1">import androidx.navigation.findNavController</span>
+<span class="s1">import androidx.navigation.ui.AppBarConfiguration</span>
+<span class="s1">import androidx.navigation.ui.navigateUp</span>
+<span class="s1">import androidx.navigation.ui.setupActionBarWithNavController</span>
+<span class="s1">import androidx.navigation.ui.setupWithNavController</span>
+<span class="s1">import androidx.drawerlayout.widget.DrawerLayout</span>
+<span class="s1">import androidx.appcompat.app.AppCompatActivity</span>
+<span class="s1">import androidx.appcompat.widget.Toolbar</span>
+
+<span class="s0">class </span><span class="s1">MenuUsuarioActivity : AppCompatActivity() {</span>
+
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">appBarConfiguration: AppBarConfiguration</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate(savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span>
+        <span class="s1">setContentView(R.layout.activity_menu_usuario)</span>
+        <span class="s0">val </span><span class="s1">toolbar: Toolbar = findViewById(R.id.toolbar)</span>
+        <span class="s1">setSupportActionBar(toolbar)</span>
+
+        <span class="s0">val </span><span class="s1">fab: FloatingActionButton = findViewById(R.id.fab)</span>
+        <span class="s1">fab.setOnClickListener { view -&gt;</span>
+            <span class="s1">Snackbar.make(view</span><span class="s0">, </span><span class="s2">&quot;Replace with your own action&quot;</span><span class="s0">, </span><span class="s1">Snackbar.LENGTH_LONG)</span>
+                <span class="s1">.setAction(</span><span class="s2">&quot;Action&quot;</span><span class="s0">, null</span><span class="s1">).show()</span>
+        <span class="s1">}</span>
+        <span class="s0">val </span><span class="s1">drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)</span>
+        <span class="s0">val </span><span class="s1">navView: NavigationView = findViewById(R.id.nav_view)</span>
+        <span class="s0">val </span><span class="s1">navController = findNavController(R.id.nav_host_fragment)</span>
+        <span class="s3">// Passing each menu ID as a set of Ids because each</span>
+        <span class="s3">// menu should be considered as top level destinations.</span>
+        <span class="s1">appBarConfiguration = AppBarConfiguration(</span>
+            <span class="s1">setOf(</span>
+                <span class="s1">R.id.nav_home</span><span class="s0">, </span><span class="s1">R.id.nav_gallery</span><span class="s0">, </span><span class="s1">R.id.nav_slideshow</span>
+            <span class="s1">)</span><span class="s0">, </span><span class="s1">drawerLayout</span>
+        <span class="s1">)</span>
+        <span class="s1">setupActionBarWithNavController(navController</span><span class="s0">, </span><span class="s1">appBarConfiguration)</span>
+        <span class="s1">navView.setupWithNavController(navController)</span>
+    <span class="s1">}</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreateOptionsMenu(menu: Menu): Boolean {</span>
+        <span class="s3">// Inflate the menu; this adds items to the action bar if it is present.</span>
+        <span class="s1">menuInflater.inflate(R.menu.menu_usuario</span><span class="s0">, </span><span class="s1">menu)</span>
+        <span class="s0">return true</span>
+    <span class="s1">}</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onSupportNavigateUp(): Boolean {</span>
+        <span class="s0">val </span><span class="s1">navController = findNavController(R.id.nav_host_fragment)</span>
+        <span class="s0">return </span><span class="s1">navController.navigateUp(appBarConfiguration) || </span><span class="s0">super</span><span class="s1">.onSupportNavigateUp()</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
