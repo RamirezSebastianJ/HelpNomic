@@ -22,10 +22,10 @@ class SolictudCreditoFragment : Fragment() {
         solicitudCreditoViewModel =
             ViewModelProviders.of(this).get(SolicitudCreditoViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_solicitud_credito, container, false)
-        val textView: TextView = root.findViewById(R.id.text_gallery)
+        /*val textView: TextView = root.findViewById(R.id.text_gallery)
         solicitudCreditoViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
-        })
+        })*/
         return root
     }
 }

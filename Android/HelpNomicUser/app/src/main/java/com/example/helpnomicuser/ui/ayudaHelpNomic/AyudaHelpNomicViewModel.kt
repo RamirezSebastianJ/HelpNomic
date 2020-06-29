@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class AyudaHelpNomicViewModel : ViewModel(){
-    private val _text = MutableLiveData<String>().apply {
+    /*private val _text = MutableLiveData<String>().apply {
         value = "Ayuda HelpNomic"
     }
-    val text: LiveData<String> = _text
+    val text: LiveData<String> = _text*/
 }

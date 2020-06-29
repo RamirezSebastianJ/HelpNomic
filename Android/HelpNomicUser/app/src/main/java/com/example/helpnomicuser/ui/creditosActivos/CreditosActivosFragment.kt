@@ -21,11 +21,11 @@ class CreditosActivosFragment : Fragment() {
     ): View? {
         creditosActivosViewModel =
             ViewModelProviders.of(this).get(CreditosActivosViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
+        val root = inflater.inflate(R.layout.fragment_creditos_activos, container, false)
+        /*val textView: TextView = root.findViewById(R.id.text_home)
         creditosActivosViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
-        })
+        })*/
         return root
     }
 }

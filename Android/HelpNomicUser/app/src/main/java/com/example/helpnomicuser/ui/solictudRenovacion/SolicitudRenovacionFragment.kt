@@ -22,10 +22,10 @@ class SolicitudRenovacionFragment : Fragment() {
         solicitudRenovacionViewModel =
             ViewModelProviders.of(this).get(SolicitudRenovacionViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_solicitud_renovacion, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
+        /*val textView: TextView = root.findViewById(R.id.text_slideshow)
         solicitudRenovacionViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
-        })
+        })*/
         return root
     }
 }

@@ -22,11 +22,11 @@ class AyudaHelpNomicFragment : Fragment() {
     ): View? {
         ayudaHelpNomicViewModel =
             ViewModelProviders.of(this).get(AyudaHelpNomicViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        ayudaHelpNomicViewModel.text.observe(viewLifecycleOwner, Observer {
+        val root = inflater.inflate(R.layout.fragment_ayuda_help_nomic, container, false)
+        //val textView: TextView = root.findViewById(R.id.text_home)
+        /*ayudaHelpNomicViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
-        })
+        })*/
         return root
     }
 }
