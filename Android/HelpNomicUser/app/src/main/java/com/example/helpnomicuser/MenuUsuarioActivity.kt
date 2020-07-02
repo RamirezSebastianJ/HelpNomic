@@ -3,6 +3,7 @@ package com.example.helpnomicuser
 import android.os.Bundle
 import android.view.Menu
 import android.widget.TextView
+import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -16,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.textfield.TextInputLayout
 
-class MenuUsuarioActivity : AppCompatActivity() {
+class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -61,5 +62,9 @@ class MenuUsuarioActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onClickFragmentButton() {
+        Toast.makeText(this, "El boton Ha sido Pulsaor", Toast.LENGTH_LONG).show()
     }
 }
