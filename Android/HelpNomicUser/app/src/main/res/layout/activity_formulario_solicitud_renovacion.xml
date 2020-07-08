@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9900FF"
+    tools:context=".ui.formularios.FormularioSolicitudRenovacion">
+
+    <TextView
+        android:id="@+id/tvAviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/formulario_de_solictud_de_renovacion"
+        android:textColor="#FDFDFD"
+        android:textSize="23sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="377dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="20dp"
+        android:background="#03FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAviso">
+
+        <TableRow
+            android:id="@+id/tr1"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#02FFFFFF">
+
+            <Button
+                android:id="@+id/bSaldo"
+                android:layout_width="188dp"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFFF00"
+                android:clickable="false"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/saldo"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editTextNumber3"
+                android:layout_width="174dp"
+                android:layout_height="42dp"
+                android:autofillHints=""
+                android:background="#F4F3F3"
+                android:backgroundTint="#F6EEEE"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-black"
+                android:inputType="number"
+                android:text="0000"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#02FFFFFF">
+
+            <Button
+                android:id="@+id/bTipoPago"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFFF00"
+                android:clickable="false"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tipo_de_pago"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="174dp"
+                android:layout_height="42dp"
+                android:background="#F4F3F3"
+                android:backgroundTint="#F6EEEE"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-black"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:text="@string/none1"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#02FFFFFF">
+
+            <Button
+                android:id="@+id/bModalidadDePago"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFFF00"
+                android:clickable="false"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/modalidad_de_pago"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
+                android:layout_width="174dp"
+                android:layout_height="42dp"
+                android:autofillHints=""
+                android:background="#F4F3F3"
+                android:backgroundTint="#F6EEEE"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-black"
+                android:inputType="textPersonName"
+                android:text="@string/none2"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#02FFFFFF">
+
+            <Button
+                android:id="@+id/bFechaInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFFF00"
+                android:clickable="false"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/fecha_de_inicio"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="174dp"
+                android:layout_height="42dp"
+                android:background="#F4F3F3"
+                android:backgroundTint="#F6EEEE"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-black"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:text="@string/_00001"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#02FFFFFF">
+
+            <Button
+                android:id="@+id/bCuotasFaltantes"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:backgroundTint="#FFFF00"
+                android:clickable="false"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/cuotas_faltantes"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/editTextNumber4"
+                android:layout_width="174dp"
+                android:layout_height="42dp"
+                android:autofillHints=""
+                android:background="#F4F3F3"
+                android:backgroundTint="#F6EEEE"
+                android:clickable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-black"
+                android:inputType="number"
+                android:text="@string/_00001"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+    </TableLayout>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:background="#008EFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="188dp"
+            android:layout_height="40dp"
+            android:background="#008EFF"
+            android:backgroundTint="#008EFF"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textPersonName"
+            android:text="Saldo Máximo de Préstamo"
+            android:textAlignment="center"
+            android:textColor="#FFFDFD"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editTextNumber5"
+            android:layout_width="188dp"
+            android:layout_height="40dp"
+            android:background="#008EFF"
+            android:backgroundTint="#008EFF"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:fontFamily="sans-serif-black"
+            android:inputType="number"
+            android:text="00000"
+            android:textAlignment="center"
+            android:textColor="#FFFDFD"
+            android:textSize="14sp" />
+    </TableRow>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="377dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow5">
+
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="17dp"
+            android:text="SOLICITAR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableRow3" />
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="377dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView41">
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FFFF00"
+            android:fontFamily="sans-serif-black"
+            android:text="METODO DE PAGO"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableRow2" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FFFF00"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/tipo_de_pago"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="377dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView38">
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="SEMANAL" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="QUINCENAL" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="MENSUAL" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FFFF00"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/tipo_de_pago"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

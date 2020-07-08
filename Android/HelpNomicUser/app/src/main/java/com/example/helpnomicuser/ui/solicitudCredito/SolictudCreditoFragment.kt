@@ -1,21 +1,20 @@
 package com.example.helpnomicuser.ui.solicitudCredito
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import android.widget.Toast.makeText
+
 
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
+
 import androidx.lifecycle.ViewModelProviders
+import com.example.helpnomicuser.ui.formularios.FormularioSolicitudCreditoActivity
 import com.example.helpnomicuser.OnFragmentActionListener
 import com.example.helpnomicuser.R
-import kotlinx.android.synthetic.main.fragment_solicitud_credito.*
 
 
 class SolictudCreditoFragment : Fragment() {
@@ -34,9 +33,16 @@ class SolictudCreditoFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_solicitud_credito, container, false)
         val btnVerificar: Button = root.findViewById(R.id.buttonVerificar)
 
+        /*
+        *Lanzar la Actividad del Formulario
+         */
+        val formulario: Intent = Intent(activity, FormularioSolicitudCreditoActivity::class.java)
         btnVerificar.setOnClickListener{
             listener?.onClickFragmentButton()
+            startActivity(formulario)
         }
+        /*====================================*/
+        
         return root
     }
 

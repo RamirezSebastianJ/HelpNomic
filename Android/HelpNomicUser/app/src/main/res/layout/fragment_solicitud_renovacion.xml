@@ -13,7 +13,7 @@
         android:layout_marginTop="52dp"
         android:background="#4A148C"
         android:fontFamily="sans-serif-black"
-        android:text="¡RECUERDE!\nSólo podrá renovar un crédito\nsi le faltan 2 o menos CUOTAS"
+        android:text="@string/recuerde_ns_lo_podr_renovar_un_cr_dito_nsi_le_faltan_2_o_menos_cuotas"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
@@ -61,9 +61,8 @@
                 android:layout_height="match_parent"
                 android:layout_column="0"
                 android:background="#FF6F00"
-                android:capitalize="words"
                 android:fontFamily="sans-serif-black"
-                android:text="FECHA"
+                android:text="@string/fecha"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
@@ -74,9 +73,8 @@
                 android:layout_width="124dp"
                 android:layout_height="match_parent"
                 android:background="#FF6F00"
-                android:capitalize="words"
                 android:fontFamily="sans-serif-black"
-                android:text="MONTO"
+                android:text="@string/monto"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
@@ -87,9 +85,8 @@
                 android:layout_width="124dp"
                 android:layout_height="match_parent"
                 android:background="#FF6F00"
-                android:capitalize="words"
                 android:fontFamily="sans-serif-black"
-                android:text="CUOTAS FALTANTES"
+                android:text="@string/cuotas_faltantes"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
@@ -101,11 +98,11 @@
             android:layout_height="match_parent" >
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#1A237E"
-                android:text="00/00/00"
+                android:text="@string/_00_00_00"
                 android:textColor="#F3F0F0" />
 
             <TextView
@@ -113,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="0"
+                android:text="@string/_01"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"
@@ -124,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="0"
+                android:text="@string/_01"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"
@@ -141,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#1A237E"
-                android:text="00/00/00"
+                android:text="@string/_00_00_00"
                 android:textColor="#F3F0F0" />
 
             <TextView
@@ -149,7 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="0"
+                android:text="@string/_01"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"
@@ -160,7 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="0"
+                android:text="@string/_01"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"
@@ -177,7 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#1A237E"
-                android:text="00/00/00"
+                android:text="@string/_00_00_00"
                 android:textColor="#F3F0F0" />
 
             <TextView
@@ -185,7 +182,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="0"
+                android:text="@string/_01"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"
@@ -196,7 +193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="0"
+                android:text="@string/_01"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"

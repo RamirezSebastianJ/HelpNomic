@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9900FF"
+    tools:context=".ui.formularios.FormularioSolicitudCreditoActivity">
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FFFF00"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/tipo_de_pago"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="#FFFF00"
+        android:fontFamily="sans-serif-black"
+        android:text="METODO DE PAGO"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow2" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:autoText="false"
+        android:fontFamily="sans-serif-black"
+        android:text="Formulario De Solictud De Crédito"
+        android:textColor="#FDFDFD"
+        android:textSize="24sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="371dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFF00"
+            android:fontFamily="sans-serif-black"
+            android:text="SALDO"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextNumber2"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F3ECEC"
+            android:ems="10"
+            android:fontFamily="sans-serif-black"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#FFFCFC"
+            android:textColorHighlight="#FFF9F9"
+            android:textColorHint="#EAE5E5"
+            android:textColorLink="#EFECEC" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="377dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="SEMANAL" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="QUINCENAL" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="MENSUAL" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="377dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28">
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="377dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow3">
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFF00"
+            android:fontFamily="sans-serif-black"
+            android:text="FECHA"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etCalendario"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F4ECEC"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:textColor="#F4EFEF" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOLICITAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

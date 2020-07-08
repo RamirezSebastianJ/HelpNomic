@@ -1,5 +1,6 @@
 package com.example.helpnomicuser
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.widget.TextView
@@ -64,7 +65,14 @@ class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+
     override fun onClickFragmentButton() {
         Toast.makeText(this, "El boton Ha sido Pulsaor", Toast.LENGTH_LONG).show()
     }
+
+    //Cargar formulario de soicitud de Credito
+
+
+
+
 }
