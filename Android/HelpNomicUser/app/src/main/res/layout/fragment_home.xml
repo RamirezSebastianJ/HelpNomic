@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="341dp"
-        android:layout_height="299dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:focusableInTouchMode="false"
         android:longClickable="false"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,48 +31,48 @@
                 android:id="@+id/imageViewNombre"
                 android:layout_width="62dp"
                 android:layout_height="53dp"
+                android:contentDescription="@string/todo_1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_user_content_main"
-                android:contentDescription="@string/todo_1" />
+                app:srcCompat="@drawable/ic_user_content_main" />
 
             <ImageView
                 android:id="@+id/imageViewCedula"
                 android:layout_width="62dp"
                 android:layout_height="53dp"
                 android:layout_marginTop="29dp"
+                android:contentDescription="@string/todo_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewNombre"
-                app:srcCompat="@drawable/ic_cedula_conteint_main"
-                android:contentDescription="@string/todo_2" />
+                app:srcCompat="@drawable/ic_cedula_conteint_main" />
 
             <ImageView
                 android:id="@+id/imageViewDeuda"
                 android:layout_width="62dp"
                 android:layout_height="53dp"
                 android:layout_marginTop="29dp"
+                android:contentDescription="@string/todo_1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewCedula"
-                app:srcCompat="@drawable/ic_money_content_main"
-                android:contentDescription="@string/todo_1" />
+                app:srcCompat="@drawable/ic_money_content_main" />
 
             <ImageView
                 android:id="@+id/imageViewPuntosNegativos"
                 android:layout_width="62dp"
                 android:layout_height="53dp"
                 android:layout_marginTop="29dp"
+                android:contentDescription="@string/todo_3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewDeuda"
-                app:srcCompat="@drawable/ic_puntos_negativos_content_main"
-                android:contentDescription="@string/todo_3" />
+                app:srcCompat="@drawable/ic_puntos_negativos_content_main" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.textfield.TextInputEditText
@@ -102,6 +102,7 @@
             android:layout_width="277dp"
             android:layout_height="53dp"
             android:layout_marginStart="2dp"
+            android:layout_marginTop="29dp"
             android:clickable="false"
             android:cursorVisible="false"
             android:focusable="false"
@@ -113,7 +114,6 @@
             android:singleLine="false"
             android:soundEffectsEnabled="false"
             android:textIsSelectable="false"
-            android:layout_marginTop="29dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout"
@@ -124,6 +124,7 @@
             android:layout_width="277dp"
             android:layout_height="53dp"
             android:layout_marginStart="2dp"
+            android:layout_marginTop="29dp"
             android:clickable="false"
             android:cursorVisible="false"
             android:focusable="false"
@@ -135,7 +136,6 @@
             android:singleLine="false"
             android:soundEffectsEnabled="false"
             android:textIsSelectable="false"
-            android:layout_marginTop="29dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout"
@@ -145,6 +145,7 @@
             android:id="@+id/textInputPuntosNegativos"
             android:layout_width="277dp"
             android:layout_height="53dp"
+            android:layout_marginTop="29dp"
             android:clickable="false"
             android:cursorVisible="false"
             android:focusable="false"
@@ -156,7 +157,6 @@
             android:singleLine="false"
             android:soundEffectsEnabled="false"
             android:textIsSelectable="false"
-            android:layout_marginTop="29dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout"

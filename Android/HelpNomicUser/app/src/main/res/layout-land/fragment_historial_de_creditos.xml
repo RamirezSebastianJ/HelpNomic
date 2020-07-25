@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.solictudRenovacion.SolicitudRenovacionFragment">
+    tools:context=".ui.historialDeCreditos.HistorialDeCreditosFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,46 +20,35 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="60dp"
-                    android:background="#4A148C"
-                    android:fontFamily="sans-serif-black"
-                    android:text="@string/recuerde_ns_lo_podr_renovar_un_cr_dito_nsi_le_faltan_2_o_menos_cuotas"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="#FFFFFF"
-                    android:textIsSelectable="true"
-                    android:textSize="24sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="20dp"
                     android:background="#FDFDFD"
                     android:fontFamily="sans-serif-black"
-                    android:text="Para Seleccionar\ndebe CLICKEAR la fecha "
+                    android:text="@string/para_seleccionar_ndebe_clickear_la_fecha"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="#5E5E5E"
                     android:textIsSelectable="true"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TableLayout
+                    android:id="@+id/tableLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4">
+                    app:layout_constraintTop_toBottomOf="@+id/textView16">
 
                     <TableRow
                         android:layout_width="match_parent"
@@ -68,7 +57,7 @@
                         <TextView
                             android:id="@+id/textView5"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_column="0"
                             android:background="#FF6F00"
                             android:fontFamily="sans-serif-black"
@@ -76,31 +65,43 @@
                             android:textAlignment="center"
                             android:textAllCaps="true"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/textView6"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:background="#FF6F00"
                             android:fontFamily="sans-serif-black"
                             android:text="@string/monto"
                             android:textAlignment="center"
                             android:textAllCaps="true"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/textView7"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="#FF6F00"
                             android:fontFamily="sans-serif-black"
                             android:text="@string/cuotas_faltantes"
                             android:textAlignment="center"
                             android:textAllCaps="true"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#FF6F00"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/puntos_negativos"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
                     </TableRow>
 
                     <TableRow
@@ -128,6 +129,17 @@
 
                         <TextView
                             android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/_01"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            app:autoSizeTextType="none" />
+
+                        <TextView
+                            android:id="@+id/textView19"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-black"
@@ -173,11 +185,22 @@
                             android:textSize="18sp"
                             app:autoSizeTextType="none" />
 
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/_01"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            app:autoSizeTextType="none" />
+
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent">
 
                         <Button
                             android:id="@+id/button3"
@@ -208,6 +231,17 @@
                             android:textColor="#000000"
                             android:textSize="18sp"
                             app:autoSizeTextType="none" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/_01"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            app:autoSizeTextType="none" />
                     </TableRow>
                 </TableLayout>
 
@@ -215,4 +249,4 @@
         </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

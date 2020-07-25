@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
         buttonIngresar.setOnClickListener {
             val textCedula: TextView =  findViewById(R.id.textCedula)
             val textPass: TextView = findViewById(R.id.textPass)
@@ -32,5 +31,4 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
 }

@@ -18,11 +18,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="377dp"
-                    android:layout_height="300dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="17dp"
@@ -47,8 +47,8 @@
 
                     <TableRow
                         android:id="@+id/tableRow3"
-                        android:layout_width="377dp"
-                        android:layout_height="45dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.466"
@@ -57,26 +57,26 @@
 
                         <Button
                             android:id="@+id/button17"
-                            android:layout_width="125dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Button" />
 
                         <Button
                             android:id="@+id/button16"
-                            android:layout_width="125dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Button" />
 
                         <Button
                             android:id="@+id/button15"
-                            android:layout_width="125dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Button" />
                     </TableRow>
 
                     <TextView
                         android:id="@+id/textView41"
-                        android:layout_width="378dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:background="#FFFF00"
@@ -92,7 +92,7 @@
 
                     <TextView
                         android:id="@+id/textView38"
-                        android:layout_width="378dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:background="#FFFF00"
@@ -108,8 +108,8 @@
 
                     <TableRow
                         android:id="@+id/tableRow2"
-                        android:layout_width="377dp"
-                        android:layout_height="45dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.511"
@@ -118,26 +118,26 @@
 
                         <Button
                             android:id="@+id/buttonSemanal"
-                            android:layout_width="125dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="SEMANAL" />
 
                         <Button
                             android:id="@+id/buttonQuincenal"
-                            android:layout_width="125dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="QUINCENAL" />
 
                         <Button
                             android:id="@+id/buttonMensual"
-                            android:layout_width="125dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="MENSUAL" />
                     </TableRow>
 
                     <TextView
                         android:id="@+id/textView37"
-                        android:layout_width="378dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:background="#FFFF00"
@@ -170,7 +170,7 @@
 
                 <TableRow
                     android:id="@+id/tableRow5"
-                    android:layout_width="377dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="20dp"
@@ -182,8 +182,8 @@
 
                     <EditText
                         android:id="@+id/editTextTextPersonName6"
-                        android:layout_width="188dp"
-                        android:layout_height="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#008EFF"
                         android:backgroundTint="#008EFF"
                         android:clickable="false"
@@ -198,8 +198,8 @@
 
                     <EditText
                         android:id="@+id/editTextNumber5"
-                        android:layout_width="188dp"
-                        android:layout_height="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#008EFF"
                         android:backgroundTint="#008EFF"
                         android:clickable="false"
@@ -215,8 +215,8 @@
 
                 <TableLayout
                     android:id="@+id/tableLayout2"
-                    android:layout_width="377dp"
-                    android:layout_height="210dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="17dp"
@@ -228,15 +228,15 @@
 
                     <TableRow
                         android:id="@+id/tr1"
-                        android:layout_width="match_parent"
-                        android:layout_height="42dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#00FFFFFF"
                         android:backgroundTint="#02FFFFFF">
 
                         <Button
                             android:id="@+id/bSaldo"
-                            android:layout_width="188dp"
-                            android:layout_height="42dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:backgroundTint="#FFFF00"
                             android:clickable="false"
                             android:fontFamily="sans-serif-black"
@@ -245,8 +245,8 @@
 
                         <EditText
                             android:id="@+id/editTextNumber3"
-                            android:layout_width="174dp"
-                            android:layout_height="42dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:autofillHints=""
                             android:background="#F4F3F3"
                             android:backgroundTint="#F6EEEE"
@@ -263,15 +263,15 @@
 
                     <TableRow
                         android:id="@+id/tr2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#00FFFFFF"
                         android:backgroundTint="#02FFFFFF">
 
                         <Button
                             android:id="@+id/bTipoPago"
                             android:layout_width="wrap_content"
-                            android:layout_height="42dp"
+                            android:layout_height="wrap_content"
                             android:backgroundTint="#FFFF00"
                             android:clickable="false"
                             android:fontFamily="sans-serif-black"
@@ -280,8 +280,8 @@
 
                         <EditText
                             android:id="@+id/editTextTextPersonName2"
-                            android:layout_width="174dp"
-                            android:layout_height="42dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="#F4F3F3"
                             android:backgroundTint="#F6EEEE"
                             android:clickable="false"
@@ -297,15 +297,15 @@
 
                     <TableRow
                         android:id="@+id/tr3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#00FFFFFF"
                         android:backgroundTint="#02FFFFFF">
 
                         <Button
                             android:id="@+id/bModalidadDePago"
                             android:layout_width="wrap_content"
-                            android:layout_height="42dp"
+                            android:layout_height="wrap_content"
                             android:backgroundTint="#FFFF00"
                             android:clickable="false"
                             android:fontFamily="sans-serif-black"
@@ -314,8 +314,8 @@
 
                         <EditText
                             android:id="@+id/editTextTextPersonName3"
-                            android:layout_width="174dp"
-                            android:layout_height="42dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:autofillHints=""
                             android:background="#F4F3F3"
                             android:backgroundTint="#F6EEEE"
@@ -331,15 +331,15 @@
 
                     <TableRow
                         android:id="@+id/tr4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#00FFFFFF"
                         android:backgroundTint="#02FFFFFF">
 
                         <Button
                             android:id="@+id/bFechaInicio"
                             android:layout_width="wrap_content"
-                            android:layout_height="42dp"
+                            android:layout_height="wrap_content"
                             android:backgroundTint="#FFFF00"
                             android:clickable="false"
                             android:fontFamily="sans-serif-black"
@@ -348,8 +348,8 @@
 
                         <EditText
                             android:id="@+id/editTextDate"
-                            android:layout_width="174dp"
-                            android:layout_height="42dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="#F4F3F3"
                             android:backgroundTint="#F6EEEE"
                             android:clickable="false"
@@ -366,15 +366,15 @@
 
                     <TableRow
                         android:id="@+id/tr5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="#00FFFFFF"
                         android:backgroundTint="#02FFFFFF">
 
                         <Button
                             android:id="@+id/bCuotasFaltantes"
                             android:layout_width="wrap_content"
-                            android:layout_height="42dp"
+                            android:layout_height="wrap_content"
                             android:backgroundTint="#FFFF00"
                             android:clickable="false"
                             android:fontFamily="sans-serif-black"
@@ -383,8 +383,8 @@
 
                         <EditText
                             android:id="@+id/editTextNumber4"
-                            android:layout_width="174dp"
-                            android:layout_height="42dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:autofillHints=""
                             android:background="#F4F3F3"
                             android:backgroundTint="#F6EEEE"

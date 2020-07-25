@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/hn_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.formularios.FormularioSolicitudRenovacion"></activity>
+        <activity android:name=".ui.formularios.ConfirmacionSolicitudCredito"></activity>
+        <activity android:name=".ui.formularios.FormularioSolicitudRenovacion" />
         <activity android:name=".ui.formularios.FormularioSolicitudCreditoActivity" />
         <activity
             android:name=".MenuUsuarioActivity"

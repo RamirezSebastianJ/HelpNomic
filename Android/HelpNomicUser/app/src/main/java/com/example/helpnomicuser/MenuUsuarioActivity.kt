@@ -72,7 +72,4 @@ class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener {
 
     //Cargar formulario de soicitud de Credito
 
-
-
-
 }

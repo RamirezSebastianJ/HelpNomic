@@ -50,7 +50,7 @@
                     android:id="@+id/buttonGenerarCodigoMagico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="84dp"
+                    android:layout_marginTop="60dp"
                     android:backgroundTint="#FFE60E"
                     android:fontFamily="sans-serif-black"
                     android:text="Generar Codigo Magico"
@@ -63,7 +63,7 @@
                     android:id="@+id/editTextNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="84dp"
+                    android:layout_marginTop="60dp"
                     android:ems="10"
                     android:hint="Ingresar Código Mágico"
                     android:inputType="number"
@@ -74,7 +74,7 @@
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="84dp"
                     android:fontFamily="sans-serif-black"
@@ -91,7 +91,7 @@
 
                 <Button
                     android:id="@+id/buttonVerificar"
-                    android:layout_width="302dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="36dp"
                     android:layout_marginBottom="84dp"

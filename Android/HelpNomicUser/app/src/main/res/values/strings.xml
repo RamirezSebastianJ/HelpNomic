@@ -82,4 +82,16 @@
     <string name="_00_00_00">00/00/00</string>
     <string name="_0_19">0</string>
     <string name="_0_20">0</string>
+    <string name="metodo_de_pago">METODO DE PAGO</string>
+    <string name="formulario_de_solictud_de_cr_dito">Formulario De Solictud De Crédito</string>
+    <string name="saldo1">SALDO</string>
+    <string name="button1">Button</string>
+    <string name="semanal">SEMANAL</string>
+    <string name="quincenal">QUINCENAL</string>
+    <string name="solicitar">SOLICITAR</string>
+    <string name="fecha12">FECHA</string>
+    <string name="button2">Button</string>
+    <string name="button13">Button</string>
+    <string name="mensual">MENSUAL</string>
+    <string name="confirmacion_de_credito">CONFIRMACION DE CREDITO</string>
 </resources>
