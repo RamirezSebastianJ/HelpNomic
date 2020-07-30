@@ -67,7 +67,7 @@ class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener {
 
 
     override fun onClickFragmentButton() {
-        Toast.makeText(this, "El boton Ha sido Pulsaor", Toast.LENGTH_LONG).show()
+        //Toast.makeText(this, "El boton Ha sido Pulsaor", Toast.LENGTH_LONG).show()
     }
 
     //Cargar formulario de soicitud de Credito

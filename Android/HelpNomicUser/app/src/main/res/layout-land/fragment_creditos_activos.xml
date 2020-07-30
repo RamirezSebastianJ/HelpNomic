@@ -110,7 +110,7 @@
                         android:layout_height="match_parent">
 
                         <Button
-                            android:id="@+id/button1"
+                            android:id="@+id/btnFecha1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="#1A237E"
@@ -157,7 +157,7 @@
                         android:layout_height="match_parent">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/btnFecha2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="#1A237E"
@@ -204,7 +204,7 @@
                         android:layout_height="match_parent">
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/btnFecha4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="#1A237E"

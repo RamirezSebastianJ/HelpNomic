@@ -7,13 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.helpnomicuser.OnFragmentActionListener
 import com.example.helpnomicuser.R
-import com.example.helpnomicuser.ui.formularios.FormularioSolicitudCreditoActivity
 import com.example.helpnomicuser.ui.formularios.FormularioSolicitudRenovacion
 
 class SolicitudRenovacionFragment : Fragment() {
@@ -29,9 +26,9 @@ class SolicitudRenovacionFragment : Fragment() {
         solicitudRenovacionViewModel =
             ViewModelProviders.of(this).get(SolicitudRenovacionViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_solicitud_renovacion, container, false)
-        val btn1: Button = root.findViewById(R.id.button1)
-        val btn2: Button = root.findViewById(R.id.button2)
-        val btn3: Button = root.findViewById(R.id.button3)
+        val btn1: Button = root.findViewById(R.id.btnFecha1)
+        val btn2: Button = root.findViewById(R.id.btnFecha2)
+        val btn3: Button = root.findViewById(R.id.btnFecha4)
 
         /*
         *Lanzar la Actividad del Formulario
@@ -41,9 +38,7 @@ class SolicitudRenovacionFragment : Fragment() {
             listener?.onClickFragmentButton()
             startActivity(formulario)
         }
-        btn2.setOnClickListener{
 
-        }
         /*====================================*/
 
         return root

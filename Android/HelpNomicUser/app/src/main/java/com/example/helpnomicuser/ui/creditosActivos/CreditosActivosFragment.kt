@@ -22,10 +22,7 @@ class CreditosActivosFragment : Fragment() {
         creditosActivosViewModel =
             ViewModelProviders.of(this).get(CreditosActivosViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_creditos_activos, container, false)
-        /*val textView: TextView = root.findViewById(R.id.text_home)
-        creditosActivosViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
+
         return root
     }
 }

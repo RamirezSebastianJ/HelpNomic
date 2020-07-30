@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.helpnomicuser.R
+import kotlinx.android.synthetic.main.fragment_historial_de_creditos.*
 
 
 class HistorialDeCreditosFragment : Fragment() {
@@ -22,10 +23,13 @@ class HistorialDeCreditosFragment : Fragment() {
         historialDeCreditosViewModel =
             ViewModelProviders.of(this).get(HistorialDeCreditosViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_historial_de_creditos, container, false)
-        /*val textView: TextView = root.findViewById(R.id.text_home)
-        historialDeCreditosViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
+
+        btnFecha1.setOnClickListener{
+
+        }
         return root
     }
+
+
+
 }

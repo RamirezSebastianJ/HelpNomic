@@ -112,7 +112,7 @@
                         android:gravity="center">
 
                         <Button
-                            android:id="@+id/button1"
+                            android:id="@+id/btnFecha1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="#1A237E"
@@ -149,7 +149,7 @@
                         android:gravity="center">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/btnFecha2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="#1A237E"
@@ -186,7 +186,7 @@
                         android:gravity="center">
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/btnFecha4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="#1A237E"

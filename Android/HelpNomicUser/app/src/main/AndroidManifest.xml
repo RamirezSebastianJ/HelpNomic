@@ -2,13 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.helpnomicuser">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/hn_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/hn_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <!-- android:usesCleartextTraffic="true" Se agregó con el fin de permitir el trafico de datos por medio del protocolo HTTP-->
         <activity android:name=".ui.formularios.ConfirmacionSolicitudCredito"></activity>
         <activity android:name=".ui.formularios.FormularioSolicitudRenovacion" />
         <activity android:name=".ui.formularios.FormularioSolicitudCreditoActivity" />
