@@ -21,6 +21,7 @@ class CreditosActivosFragment : Fragment() {
     ): View? {
         creditosActivosViewModel =
             ViewModelProviders.of(this).get(CreditosActivosViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_creditos_activos, container, false)
 
         return root

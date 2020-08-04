@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 import org.json.JSONObject
 
 //Response.Listener<JSONObject>, Response.ErrorListener
-//son las implemenbtaciones necesarias para trabajar volley y hacer la conexión con los protocolos http
+//son las implementaciones necesarias para trabajar volley y hacer la conexión con los protocolos http
 
 class MainActivity : AppCompatActivity(), Response.Listener<JSONObject>, Response.ErrorListener  {
 
@@ -37,8 +37,6 @@ class MainActivity : AppCompatActivity(), Response.Listener<JSONObject>, Respons
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-
 
         buttonIngresar.setOnClickListener {
             val textCedula: TextView =  findViewById(R.id.textCedula)
@@ -65,13 +63,13 @@ class MainActivity : AppCompatActivity(), Response.Listener<JSONObject>, Respons
         progreso!!.show()
 
 
-        val url : String = "http://192.168.0.102/helpnomic/loginUsuario.php?cedula=" + textCedula.text.toString() + "&pass=" + textPass.text.toString()
+        val url : String = "http://192.168.0.101/HelpNomicUser/loginUsuario.php?cedula=" + textCedula.text.toString() + "&pass=" + textPass.text.toString()
         jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null, this, this)
         request?.add(jsonObjectRequest)
     }
 
     override fun onResponse(response: JSONObject?) {
-        Toast.makeText(this, "La inserción se realizó correctamanete", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "BIENVENIDO", Toast.LENGTH_LONG).show()
         val cedula:Int? = textCedula.text.toString().toInt()
         val pass:Int? = textPass.text.toString().toInt()
         val menuUser = Intent(this, MenuUsuarioActivity::class.java)
@@ -88,6 +86,5 @@ class MainActivity : AppCompatActivity(), Response.Listener<JSONObject>, Respons
         Toast.makeText(this, "No se pudo Ingresar", Toast.LENGTH_LONG).show()
         Log.i("Error", error.toString())
     }
-
 
 }
