@@ -14,13 +14,20 @@ import com.android.volley.Response
 import com.android.volley.VolleyError
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.example.helpnomicuser.entidades.Capitalizar
+import com.example.helpnomicuser.entidades.Usuario
 import kotlinx.android.synthetic.main.activity_login.*
+import org.json.JSONArray
+import org.json.JSONException
 import org.json.JSONObject
 
 //Response.Listener<JSONObject>, Response.ErrorListener
 //son las implementaciones necesarias para trabajar volley y hacer la conexión con los protocolos http
 
 class MainActivity : AppCompatActivity(), Response.Listener<JSONObject>, Response.ErrorListener  {
+
+    var textCedula: TextView? =  null
+    var textPass: TextView? = null
 
     var progreso: ProgressDialog? = null
 
@@ -39,16 +46,13 @@ class MainActivity : AppCompatActivity(), Response.Listener<JSONObject>, Respons
         setContentView(R.layout.activity_login)
 
         buttonIngresar.setOnClickListener {
-            val textCedula: TextView =  findViewById(R.id.textCedula)
-            val textPass: TextView = findViewById(R.id.textPass)
-
-            //println( "cedula" + textCedula.text.toString())
-            if(textCedula.text.toString() == "" && textPass.text.toString() == ""){
+            textCedula = findViewById(R.id.textCedula)
+            textPass = findViewById(R.id.textPass)
+            if(textCedula?.text.toString() == "" && textPass?.text.toString() == ""){
                 val toast:Toast = makeText(this,"Por favor! Ingrese sus datos de acceso", Toast.LENGTH_SHORT)
                 toast.show()
             }else{
                 cargarWebService()
-
             }
         }
     }
@@ -57,27 +61,50 @@ class MainActivity : AppCompatActivity(), Response.Listener<JSONObject>, Respons
 
     private fun cargarWebService(){
 
+        //Barrra de Carga
         progreso = ProgressDialog(this)
         progreso!!.setTitle("Koltin ProgressBar")
-        progreso!!.setMessage("Esperes, estamos conectando a la Base de Datos")
+        progreso!!.setMessage("Espere, estamos conectando la Base de Datos")
         progreso!!.show()
 
 
-        val url : String = "http://192.168.0.101/HelpNomicUser/loginUsuario.php?cedula=" + textCedula.text.toString() + "&pass=" + textPass.text.toString()
+        val url : String = "http://192.168.0.104/HelpNomicUser/loginUsuario.php?cedula=" + textCedula?.text.toString() + "&pass=" + textPass?.text.toString()
         jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null, this, this)
         request?.add(jsonObjectRequest)
+
     }
 
     override fun onResponse(response: JSONObject?) {
-        Toast.makeText(this, "BIENVENIDO", Toast.LENGTH_LONG).show()
-        val cedula:Int? = textCedula.text.toString().toInt()
-        val pass:Int? = textPass.text.toString().toInt()
+        Toast.makeText(this, "BIENVENIDO a HELPNOMIC", Toast.LENGTH_LONG).show()
+
+        var miUsuario: Usuario = Usuario()
+
+        val json: JSONArray? = response?.optJSONArray("usuario")
+        var jsonObject: JSONObject? = null
+
+        try {
+            jsonObject = json?.getJSONObject(0)
+            miUsuario.nombre = jsonObject?.optString("nombre")
+            miUsuario.nombre = miUsuario.nombre?.let { Capitalizar(it) }
+            miUsuario.cedula = jsonObject?.optString("cedula")
+            miUsuario.direccion = jsonObject?.optString("direccion")
+            miUsuario.cantidad_prestamos = jsonObject?.optString("cantidad_prestamos")
+            miUsuario.puntos_negativos = jsonObject?.optString("puntos_negativos")
+            miUsuario.telefono = jsonObject?.optString("telefono")
+            miUsuario.deuda_total = jsonObject?.optString("deuda_total")
+            miUsuario.id_admnistrador = jsonObject?.optString("id_administrador")
+
+        }catch (e: JSONException){
+            e.printStackTrace()
+        }
+
+        val cedula:Int? = textCedula?.text.toString().toInt()
+        val nombre:String? = miUsuario.nombre
+
         val menuUser = Intent(this, MenuUsuarioActivity::class.java)
-        menuUser.putExtra("Cedula",cedula)
-        menuUser.putExtra("Pass", pass)
+        menuUser.putExtra("MiUsuario", miUsuario)
+
         startActivity(menuUser)
-        textCedula.setText("")
-        textPass.setText("")
 
     }
 

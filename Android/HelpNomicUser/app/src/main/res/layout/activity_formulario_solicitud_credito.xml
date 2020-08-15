@@ -9,12 +9,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -23,14 +24,17 @@
 
                 <TextView
                     android:id="@+id/textView28"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
                     android:layout_marginTop="44dp"
-                    android:background="#FFFF00"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bordes_caja_texto"
                     android:fontFamily="sans-serif-black"
+                    android:gravity="center|center_horizontal|center_vertical"
                     android:text="@string/metodo_de_pago"
                     android:textAlignment="center"
-                    android:textColor="#000000"
+                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -38,15 +42,17 @@
 
                 <TextView
                     android:id="@+id/textView22"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="22dp"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="36dp"
-                    android:layout_marginEnd="23dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/bordes_botones_fechas"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/formulario_de_solictud_de_cr_dito"
-                    android:textColor="#FDFDFD"
-                    android:textSize="24sp"
+                    android:text="FORMULARIO SOLICITUD DE CREDITO"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
                     app:autoSizeTextType="uniform"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.518"
@@ -59,7 +65,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="70dp"
                     android:layout_marginBottom="50dp"
+                    android:background="@drawable/bordes_botones_solicitudes"
+                    android:fontFamily="sans-serif-black"
                     android:text="@string/solicitar"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -67,9 +76,10 @@
 
                 <Button
                     android:id="@+id/btnFecha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
                     android:layout_marginTop="70dp"
+                    android:background="@drawable/bordes_botones_fechas"
                     android:fontFamily="sans-serif-black"
                     android:text="FECHA"
                     android:textSize="24sp"
@@ -77,10 +87,66 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tableRow3" />
 
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bordes_caja_texto"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:text="@string/tipo_de_pago"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+                <TableRow
+                    android:id="@+id/tableRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bordes_caja_texto"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="@string/saldo"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editTextNumber2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints=""
+                        android:background="@drawable/bordes_edit_text"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#FFFCFC"
+                        android:textColorHighlight="#FFF9F9"
+                        android:textColorHint="#EAE5E5"
+                        android:textColorLink="#EFECEC" />
+                </TableRow>
+
                 <TableRow
                     android:id="@+id/tableRow3"
-                    android:layout_width="377dp"
-                    android:layout_height="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="17dp"
@@ -90,104 +156,59 @@
 
                     <Button
                         android:id="@+id/button17"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bordes_botones_opcionales"
                         android:text="@string/button" />
 
                     <Button
                         android:id="@+id/button16"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bordes_botones_opcionales"
                         android:text="@string/button" />
 
                     <Button
                         android:id="@+id/button15"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bordes_botones_opcionales"
                         android:text="@string/button" />
                 </TableRow>
 
                 <TableRow
-                    android:id="@+id/tableRow"
+                    android:id="@+id/tableRow2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="21dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView22">
-
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="110dp"
-                        android:layout_height="wrap_content"
-                        android:background="#FFFF00"
-                        android:fontFamily="sans-serif-black"
-                        android:text="@string/saldo"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="24sp" />
-
-                    <EditText
-                        android:id="@+id/editTextNumber2"
-                        android:layout_width="261dp"
-                        android:layout_height="wrap_content"
-                        android:autofillHints=""
-                        android:backgroundTint="#F3ECEC"
-                        android:ems="10"
-                        android:fontFamily="sans-serif-black"
-                        android:inputType="number"
-                        android:textAlignment="center"
-                        android:textColor="#FFFCFC"
-                        android:textColorHighlight="#FFF9F9"
-                        android:textColorHint="#EAE5E5"
-                        android:textColorLink="#EFECEC" />
-                </TableRow>
-
-                <TextView
-                    android:id="@+id/textView26"
-                    android:layout_width="378dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="#FFFF00"
-                    android:fontFamily="sans-serif-black"
-                    android:text="@string/tipo_de_pago"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="24sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tableRow" />
-
-                <TableRow
-                    android:id="@+id/tableRow2"
-                    android:layout_width="377dp"
-                    android:layout_height="57dp"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginTop="19dp"
                     android:layout_marginEnd="17dp"
+                    android:foregroundGravity="center_vertical|center|center_horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView26">
 
                     <Button
                         android:id="@+id/buttonSemanal"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bordes_botones_opcionales"
                         android:text="@string/semanal" />
 
                     <Button
                         android:id="@+id/buttonQuincenal"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bordes_botones_opcionales"
                         android:text="@string/quincenal" />
 
                     <Button
                         android:id="@+id/button_mensual"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bordes_botones_opcionales"
                         android:text="@string/mensual" />
+
                 </TableRow>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

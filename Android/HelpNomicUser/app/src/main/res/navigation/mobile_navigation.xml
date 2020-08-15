@@ -9,7 +9,28 @@
         android:id="@+id/nav_home"
         android:name="com.example.helpnomicuser.ui.home.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery"
+            app:destination="@id/nav_gallery"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow"
+            app:destination="@id/nav_slideshow"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_creditosActivosFragment"
+            app:destination="@id/nav_creditosActivosFragment"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_historialDeCreditosFragment"
+            app:destination="@id/nav_historialDeCreditosFragment"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_ayudaHelpNomicFragment"
+            app:destination="@id/nav_ayudaHelpNomicFragment"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"

@@ -1,10 +1,10 @@
 package com.example.helpnomicuser
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -16,9 +16,12 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.google.android.material.textfield.TextInputLayout
+import androidx.navigation.Navigation
+import com.example.helpnomicuser.entidades.Usuario
 
-class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener {
+
+class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener,
+    NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -30,8 +33,19 @@ class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener {
 
         //Recibir datos del main activity
         val bundle = intent.extras
-        val cedula = bundle?.getString("Cedula")
-        val pass = bundle?.getString("pass")
+        val miUsuario: Usuario = bundle?.getSerializable("MiUsuario") as Usuario
+
+        //Bundle con el que se pasaran los datos del usuario al fragment Home
+        val bundleFragment: Bundle = Bundle()
+        val myMessage: String = "paso de datos exitoso"
+
+
+        val navigationView: NavigationView = findViewById(R.id.nav_view)
+            navigationView.setNavigationItemSelectedListener(this)
+
+        val hview: View = navigationView.getHeaderView(0)
+        val nombre_nav:TextView = hview.findViewById(R.id.nombre_nav_user)
+        val cc:TextView = hview.findViewById(R.id.cedula_nav_user)
 
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
@@ -42,6 +56,20 @@ class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
+
+
+        //Cambio de nombre y cedula del usuario en los campos de la cabecera del navigation Drawer
+        nombre_nav.setText(miUsuario.nombre)
+        cc.setText(miUsuario.cedula.toString())
+
+        //anexo de datos al bundle
+        bundleFragment.putString("nombre", miUsuario.nombre)
+
+        //se agrega el .navigate con el fin de pasar los datos almacenados en el bundle
+        Navigation.findNavController(this,R.id.nav_host_fragment).navigate(R.id.nav_home, bundleFragment)
+
+
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -67,9 +95,12 @@ class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener {
 
 
     override fun onClickFragmentButton() {
-        //Toast.makeText(this, "El boton Ha sido Pulsaor", Toast.LENGTH_LONG).show()
+        TODO("Not yet implemented")
     }
 
-    //Cargar formulario de soicitud de Credito
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        TODO("Not yet implemented")
+    }
+
 
 }
