@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(), Response.Listener<JSONObject>, Respons
         progreso!!.show()
 
 
-        val url : String = "http://192.168.0.104/HelpNomicUser/loginUsuario.php?cedula=" + textCedula?.text.toString() + "&pass=" + textPass?.text.toString()
+        val url : String = "http://192.168.0.101/HelpNomicUser/loginUsuario.php?cedula=" + textCedula?.text.toString() + "&pass=" + textPass?.text.toString()
         jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null, this, this)
         request?.add(jsonObjectRequest)
 

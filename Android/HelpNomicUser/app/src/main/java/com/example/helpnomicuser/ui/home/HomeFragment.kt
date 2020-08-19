@@ -1,5 +1,6 @@
 package com.example.helpnomicuser.ui.home
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,6 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.helpnomicuser.R
-
 
 class HomeFragment : Fragment() {
 
@@ -23,15 +23,11 @@ class HomeFragment : Fragment() {
             ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
-        if (arguments!=null){
-            println("*--------------------**************---------------------------------------")
-            println("entro al condicional")
-            val nombre_home: EditText = root.findViewById(R.id.textInputUsuario)
-            val nombreBundle: String? = arguments?.getString("nombre")
+        var prefs: SharedPreferences = requireActivity().getSharedPreferences("Preferences", 0)
+        var nombre: String? = prefs.getString("nombre", "")
 
-            nombre_home.setText(nombreBundle)
-
-        }
+        val nombre_home: EditText = root.findViewById(R.id.textInputUsuario)
+        nombre_home.setText(nombre)
 
         return root
     }
