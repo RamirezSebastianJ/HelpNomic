@@ -25,10 +25,21 @@ class HomeFragment : Fragment() {
 
         var prefs: SharedPreferences = requireActivity().getSharedPreferences("Preferences", 0)
         var nombre: String? = prefs.getString("nombre", "")
+        var cedula: String? = prefs.getString("cedula", "")
+        var totalPrestado: String? = prefs.getString("deudaTotal", "")
+        var puntosNegros: String? = prefs.getString("puntosNegros", "")
 
         val nombre_home: EditText = root.findViewById(R.id.textInputUsuario)
+        val cedula_cliente: EditText = root.findViewById(R.id.textInputCedula)
+        val totalPrestadoCliente: EditText = root.findViewById(R.id.textInputDeuda)
+        val puntosNegtivosClientes: EditText = root.findViewById(R.id.textInputPuntosNegativos)
+
         nombre_home.setText(nombre)
+        cedula_cliente.setText(cedula)
+        totalPrestadoCliente.setText(totalPrestado)
+        puntosNegtivosClientes.setText(puntosNegros)
 
         return root
     }
 }
+

@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -42,7 +43,10 @@ class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener,
         val bundle = intent.extras
         val miUsuario: Usuario = bundle?.getSerializable("MiUsuario") as Usuario
 
-       editor.putString("nombre", miUsuario.nombre.toString())
+        editor.putString("nombre", miUsuario.nombre.toString())
+        editor.putString("cedula", miUsuario.cedula.toString())
+        editor.putString("montoPrestado", miUsuario.deuda_total.toString())
+        editor.putString("puntosNegros", miUsuario.puntos_negativos.toString())
         editor.commit()
 
         //Bundle con el que se pasaran los datos del usuario al fragment Home
@@ -92,9 +96,9 @@ class MenuUsuarioActivity : AppCompatActivity(), OnFragmentActionListener,
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-
+    //Por el momento es obligatorio implementar este metodo  porque de lo contrario no se implementar la interpretación de los botonos
     override fun onClickFragmentButton() {
-        TODO("Not yet implemented")
+        print("Boton pulsado")
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

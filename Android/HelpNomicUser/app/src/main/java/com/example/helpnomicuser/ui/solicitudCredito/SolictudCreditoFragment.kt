@@ -33,9 +33,7 @@ class SolictudCreditoFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_solicitud_credito, container, false)
         val btnVerificar: Button = root.findViewById(R.id.buttonVerificar)
 
-        /*
-        *Lanzar la Actividad del Formulario
-         */
+        //Lanzar el formulario dle activity
         val formulario: Intent = Intent(activity, FormularioSolicitudCreditoActivity::class.java)
         btnVerificar.setOnClickListener{
             listener?.onClickFragmentButton()
